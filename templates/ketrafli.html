@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ketrafli.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="ketrafli.js"></script> 
+</head>
+<body>
+
+
+
+
+    <div  style="background-color: #F3F1F7;padding-left: 30px;">
+        <br>
+      <h4>Kredit Kalkulyatoru</h4>
+      <br><br>
+    <div class="form-group">
+      <label for="aylikEmekHaqqi">Aylıq Emek Haqqı (AZN)</label>
+      <div class="d-flex flex-column">
+      <input type="number" id="aylikEmekHaqqi" min="0" value="0" oninput="hesapla()">
+      <input style="margin-top: -8px;" type="range" id="emekHaqqiRange" min="0" max="14950" step="100" value="7500" oninput="updateInput('emekHaqqiRange', 'aylikEmekHaqqi', 'AZN')">
+    </div>
+    </div>
+    <div class="form-group">
+      <label for="mebleg">Məbləğ (AZN)</label>
+      <div class="d-flex flex-column" style="padding-left: 80px;">
+      <input type="number" id="mebleg" min="0" max="50000" value="0" oninput="hesapla()">
+      <input style="margin-top: -8px;" type="range" id="meblegRange" min="0" max="50000" step="100" value="25000" oninput="updateInput('meblegRange', 'mebleg', 'AZN')">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="muddet">Müddət (Ay)</label>
+      <div class="d-flex flex-column" style="padding-left: 90px;">
+
+      <input type="number" id="muddet" min="0" max="59" value="0" oninput="hesapla()">
+      <input style="margin-top: -8px;" type="range" id="muddetRange" min="0" max="59" step="1" value="30" oninput="updateInput('muddetRange', 'muddet', 'Ay')">
+      </div>
+    </div>
+    <div class="result">
+      <p>Aylıq Ödəniş: <span id="aylikOdeme"></span> AZN</p>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
