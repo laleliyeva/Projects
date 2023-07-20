@@ -1,7 +1,23 @@
 from app import app
-from flask import render_template,  request,redirect
-from flask_login import LoginManager, UserMixin, login_user, logout_user, login_required, current_user
-from forms import *
 from models import *
-from flask_login import login_user, login_required
-from werkzeug.security import check_password_hash
+from flask import render_template
+
+
+@app.route('/credits/')
+def credits():
+    return render_template('cards.html')
+   
+@app.route('/credit_detail/')
+def credit_detail():
+    return render_template('kreditkalkulyatoru.html')
+
+@app.route('/xeber/')
+def xeber():
+    return render_template('xeberler.html')
+
+@app.route('/xeber_detail/')
+def xeber_detail():
+    return render_template('xeber1.html')
+
+    
+    

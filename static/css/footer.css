@@ -1,0 +1,283 @@
+.hisse_1 {
+    text-decoration: none;
+    color: black;
+  }
+  
+.hisse_1:hover {
+    text-decoration: underline;
+  }
+
+.box1 {
+  display: flex;
+  justify-content: space-around;
+}
+#reng1 {
+  color: rgba(0, 0, 0, .5);
+}  
+h3 {
+  font-size:x-large;
+}
+
+.box2_2 {
+  display: flex;
+  justify-content: space-evenly;
+}
+.box2 {
+  display: flex;
+  justify-content: space-around;
+
+}
+#icon { 
+  width: 40px;
+  height: 40px;
+  background-color: #F3F1F7;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  border-radius: 100%;
+}
+.icon {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+#logo {
+  display: flex;
+  justify-content: center;
+}
+.box3 {
+  margin-right: 80px;
+  margin-left: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.link:hover {
+  text-decoration: none;
+}
+.box4 {
+  display: flex;
+  justify-content: center;
+}
+#j:hover {
+  text-decoration: none;
+}
+#s {
+  display: flex;
+  justify-content: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.cardfooter {
+  border:solid;
+  width:  33.333%;
+  border-radius: 10px ;
+  padding: 30px 30px 20px 30px;
+  margin: 0 15px;
+  border-color: rgb(237, 241, 244);
+  font: 16px/1.6 'r', Arial, sans-serif;
+}
+.cardskredit1 {
+  display: flex;
+  justify-content: start;
+  margin: 20px 75px;
+}
+
+.daha {
+  padding-top: 10px;
+}
+.butunxeber{
+  padding: 15px;
+  width: 50px;
+  height: 100px;
+  border: solid;
+  border-radius: 5px;
+
+}
+.butunxeber:hover {
+  background-color:#0091FE;
+  color: white !important;
+}
+.butunxeber:hover img {
+  filter: brightness(0) invert(1);
+}
+/* kreditcard1.css */
+
+.basliq {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.metnkart {
+  font-size: 22px;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 30px;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 0 0 20px;
+  text-align: center;
+  
+}
+
+.metn2kart {
+
+  font: 16px/1.6 'r', Arial, sans-serif;
+  color: #9d9d9d;
+  padding: 20px 0;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.cardkredit {
+  display: flex  !important;
+  justify-content:center !important;
+  border: 1px solid #ECECEC;
+  border-radius: 10px;
+  width: 1000px;
+  height: 100%;
+  margin: 0 0 45px 0;
+  
+}
+
+.kartsol {
+  padding: 45px 40px 45px 60px;
+}
+
+.para {
+  width: 180px;
+  height: 60px;
+  transform: skew(-14deg, 0);
+  background: black;
+  transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+}
+
+#sifaris {
+  color: #ffffff;
+  margin-left: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.para:hover {
+  background-color: rgb(255, 225, 0);
+}
+
+#sifaris:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.ox {
+  filter: grayscale(90%);
+}
+
+.ox-:hover {
+  padding-left: 5px;
+}
+
+/* kettrafli.css */
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]:hover {
+  border: 0;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 7px;
+  border-radius: 5px;
+  background-image: linear-gradient(#FFC72C, #FFC72C);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="range"]#period_range {
+  background-size: 25% 100%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FFC72C;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FFC72C;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #FFC72C;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background .3s ease-in-out;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #FFC72C;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  background: #FFC72C;
+}
+
+input[type="range"]::-ms-thumb:hover {
+  background: #FFC72C;
+}
+
+/* Input Track */
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type=range]::-moz-range-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+input[type="range"]::-ms-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/* xeber.css1 */
+.xeber {display: flex;
+  justify-content:start;
+}
+.basliqxeber {
+  font-family: 'h';
+  font-size: 54px;
+}
+.metnxeber {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: Arial, sans-serif;
+}
