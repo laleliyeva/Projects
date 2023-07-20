@@ -12,7 +12,6 @@ app.config['SECRET_KEY']='YeloBank'
 from extensions import *
 from controllers import *
 from models import *
-
 from forms import *
 
 if __name__=='__main__':
