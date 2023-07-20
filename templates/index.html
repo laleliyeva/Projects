@@ -1,0 +1,267 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+        aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/8608/taksit_karti_-_sayt_cover-aze_updated.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="padding-top: 50px; padding-left: 0px;">
+          <h3>Taksit funksiyali kredit karti</h3>
+          <p>70/24 ustunlukle</p>
+          <button>Sifaris et</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/10915/yay_krediti_-_11_7_-_sayt_cover.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>30 000 AZN-dek</h3>
+          <p>Parlaq yay krediti</p>
+          <button>Sifaris et</button>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/6973/onlayn_kredit-saytcover_1.png"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Banka gelmeden</h3>
+          <p>Tam onlayn kredit</p>
+          <button>Sifaris et</button>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/3712/birthday_-_karusel_2.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Ad gunu hediyyesi</h3>
+          <p>Endirimli ve kommissiyasiz kredit</p>
+          <button style="padding-top: 30px;">Sifaris et</button>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/3125/1.png"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Baxisini deyis</h3>
+          <button>Sifaris et</button>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img style="background-color: #FFC628;padding-left: 800px; position: relative;" src="https://www.yelo.az/site/assets/files/2502/yelo_az_-_7_deqiqe-aze_1.jpg"
+          class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>Krediti cemi 7 deqiqeye al</h3>
+          <p>Onlayn sifaris et</p>
+          <button>Sifaris et</button>
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<br><br>
+<div class="container" class="story">
+  <div>
+    <h4>Storiler <span class="counter">3</span></h4>
+  </div>
+  <div style="display: flex; justify-content: space-between;">
+    {% for story in stories %}
+        <div class="card" style="background-color: {{story.text_bg}};">
+          <div class="card-body">
+            <span class="tag">{{story.title}}</span>
+            <p class="ppp" style="padding-left: 6px;
+            width: 100%;
+            font-size: 16px; color: white;" >{{story.text}} </p>
+          </div>
+          <img src="{{ story.img }}" alt="" class="card-img">
+        </div>
+    {% endfor %}
+  </div>
+</div>
+
+<br><br><br>
+<div class="container d-md-flex">
+  <div>
+    <div class="card" style="width: 33rem;height: 300px;">
+      <div class="card-body d-flex" style="background-color: #F3F1F7;">
+        <div class="d-md-block">
+          <h5 class="card-title">Yelo Light</h5>
+          <br>
+          <b class="b">İstənilən ödənişlər üçün doğru seçim</b>
+          <br>
+          <div>
+            <div>
+              <div>Qaliga gelir</div>
+              <div>4%</div>
+            </div>
+            <div>
+              <div>Cashback</div>
+              <div>30%-dek</div>
+            </div>
+          </div>
+          <br>
+          <a href="#" class="btn btn-primary" style="background-color:#FFC628 ;color: black;">Sifaris et</a>
+        </div>
+        <div>
+          <img style="width: 11rem; margin-left: 50px; padding-bottom: 0px; " height="250px" src="https://www.yelo.az/site/assets/files/1928/55.png"
+            alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="background-color: #F3F1F7;padding-left: 30px;">
+    <br>
+    <h4>Kredit Kalkulyatoru</h4>
+    <br><br>
+    <div class="form-group">
+      <label for="aylikEmekHaqqi">Aylıq Emek Haqqı (AZN)</label>
+      <div class="d-flex flex-column">
+        <input type="number" id="aylikEmekHaqqi" min="0" value="0" oninput="hesapla()">
+        <input style="margin-top: -8px;" type="range" id="emekHaqqiRange" min="0" max="14950" step="50" value="7500"
+          oninput="updateInput('emekHaqqiRange', 'aylikEmekHaqqi', 'AZN')">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="mebleg">Məbləğ (AZN)</label>
+      <div class="d-flex flex-column" style="padding-left: 80px;">
+        <input type="number" id="mebleg" min="0" max="50000" value="0" oninput="hesapla()">
+        <input style="margin-top: -8px;" type="range" id="meblegRange" min="0" max="50000" step="50" value="25000"
+          oninput="updateInput('meblegRange', 'mebleg', 'AZN')">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="muddet">Müddət (Ay)</label>
+      <div class="d-flex flex-column" style="padding-left: 90px;">
+
+        <input type="number" id="muddet" min="0" max="59" value="0" oninput="hesapla()">
+        <input style="margin-top: -8px;" type="range" id="muddetRange" min="0" max="59" step="1" value="30"
+          oninput="updateInput('muddetRange', 'muddet', 'Ay')">
+      </div>
+    </div>
+    <div class="result">
+      <p>Aylıq Ödəniş: <span id="aylikOdeme"></span> AZN</p>
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+<div class="container">
+  <div>
+    <h4>Sizin ucun faydali</h4>
+  </div>
+  <br>
+  <div class="d-flex" style="width: 120%;">
+    <div class="card" style="width: 33rem;height: 300px;">
+      <div class="card-body d-flex" style="background-color: #F3F1F7;">
+        <div class="d-md-block">
+          <h5 class="card-title">Yelo App</h5>
+          <p class="card-text">Yelo-dan yeni və parlaq mobil əlavə. Hesablarını izlə, köçürmə və ödənişlərini sürətli
+            et.</p>
+          <ul>
+            <li class="d-flex">
+              <a href="https://apps.apple.com/az/app/yelo/id1515449668" class="store apple" target="_blank"></a>
+              <div>
+                <img src="images/apple.svg" alt="">
+                <span>Yukle</span>
+                <span>App Store</span>
+              </div>
+            </li>
+            <li>
+              <img src="google_play.svg" alt="">
+              <span>Yukle</span>
+              <span>PlayStore</span>
+              <a href="https://play.google.com/store/apps/details?id=az.yelo.app&hl=ru" class="store google_play"
+                target="_blank"></a>
+            </li>
+            <li>
+              <img width="30px" src="images/huawei_play.svg" alt="">
+              <span>Yukle</span>
+              <span>AppGallery</span>
+              <a href="https://appgallery.huawei.com/#/app/C104500649" class="store huawei_play"></a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <img style="width: 12rem; " height="280px" src="https://www.yelo.az/site/assets/files/1752/screen_app.jpg" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="d-block">
+      <div class="calculator" style="padding-left: 100px;">
+        <div class="c_line">
+          <input type="text" placeholder="Satıram" value="" class="c_int input_value only_number">
+          <select name="from" class="s_curr">
+            <option value="azn" selected="">AZN</option>
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+          </select>
+        </div>
+        <div class="c_line">
+          <div class="c_int input_result">Alıram</div>
+          <select name="to" class="s_curr">
+            <option value="azn" style="display: none">AZN</option>
+            <option value="usd" selected="">USD</option>
+            <option value="eur">EUR</option>
+          </select>
+        </div>
+        <div class="c_result">
+          <div class="cr_item">
+            <p>Valyuta</p>
+            <b class="cr_item_curr table_rate" data-curr="usd" style="display: block">USD</b>
+            <b class="cr_item_curr table_rate" data-curr="eur" style="display: block">EUR</b>
+          </div>
+          <div class="cr_item">
+            <p>Alış</p>
+            <b class="cr_item_buy table_buy_rate" data-curr="usd" data-cash="1.6950" data-nocash="1.6950"
+              style="display: block">1.6950</b>
+            <b class="cr_item_buy table_buy_rate" data-curr="eur" data-cash="1.8600" data-nocash="1.8600"
+              style="display: block">1.8600</b>
+          </div>
+          <div class="cr_item">
+            <p>Satış</p>
+            <b class="cr_item_sell table_sell_rate" data-curr="usd" data-cash="1.7015" data-nocash="1.7015"
+              style="display: block">1.7015</b>
+            <b class="cr_item_sell table_sell_rate" data-curr="eur" data-cash="1.9550" data-nocash="1.9550"
+              style="display: block">1.9550</b>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p class="info_p">Region filiallarında məzənnələr fərqli ola bilər</p>
+      <a href="https://www.yelo.az/az/exchange-rates/" class="all_exchanges">Bütün məzənnələr</a>
+
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

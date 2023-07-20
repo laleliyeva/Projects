@@ -174,16 +174,20 @@
 }
 
 
-
 .card {
   height: 150px;
-  width: 320px;
-  background-image: url(st1.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom right;
+  width: 31%;
+  flex-direction: row;
+  border: 0;
+}
 
+.card img {
+  width: 150px;
+}
 
+.card-body {
+  width: 150px;
+  padding: 25px 0 0 25px;
 
 }
 
@@ -979,4 +983,14 @@ div {
   font-family: 'b';
   background: url(ox.svg) no-repeat 91% 21px;
   transition: all .2s cubic-bezier(.52,.01,.16,1);
+}
+
+.ic{
+  transform: skew(-14deg, 0);
+    background: black;
+    transition: all 0.2s cubic-bezier(.52, .01, .16, 1);
+    color: white;
+    padding: 20px 0px 30px 50px;
+    font-size: 20px;
+    font-family: 'b';
 }
