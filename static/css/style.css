@@ -182,7 +182,7 @@
 }
 
 .card img {
-  width: 150px;
+  width: 30px;
 }
 
 .card-body {
@@ -493,6 +493,7 @@ input[type="range"]::-ms-track {
 .com_card {
   font-family: 'h';
   font-size: 34px;
+
 }
 
 .com_p {
@@ -500,13 +501,17 @@ input[type="range"]::-ms-track {
   line-height: 20px;
   color: rgba(0, 0, 0, 0.5);
   max-width: 590px;
+  padding-left: 10px;
 
 }
-
+.item{
+  justify-content: space-around;
+}
 .items {
   display: flex;
-  justify-content: space-evenly;
-  width: 59%;
+  justify-content: space-around;
+  width: 60%;
+
 }
 
 .sifariss {
@@ -529,13 +534,19 @@ input[type="range"]::-ms-track {
 
 .bg img {
   height: 300px;
-  margin-left: 190px;
+  margin-left: 400px;
 }
 
 .um {
   border: 1px solid;
   display: flex;
   padding: 15px;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.um_ic{
+  justify-content: space-between;
 }
 
 .phone {
@@ -993,4 +1004,41 @@ div {
     padding: 20px 0px 30px 50px;
     font-size: 20px;
     font-family: 'b';
+}
+
+
+
+.col_content {
+  border-radius: 10px;
+  border: 1px solid #ECECEC;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+
+.topp2-wrapper {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.topp2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar2 a::after{
+  text-decoration: underline;
+}
+
+
+.duymecik:hover {
+  background-color: black;
+  border: solid black;
+  color: white
 }

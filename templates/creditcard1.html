@@ -16,48 +16,47 @@
                 dəqiqəyə bank krediti əldə edin!</p>
         </div>
 
-
+    {% for i in m1 %}
         <div class="cardkredit" >
             <div class="kartsol">
                 <div>
-                    <p style="font: 34px/1.6 'r', Arial, sans-serif; margin:0">İstehlak krediti</p>
+                    <p style="font: 34px/1.6 'r', Arial, sans-serif; margin:0">{{ i.title }}</p>
                 </div>
                 <div style="font: 16px/1.6 'r', Arial, sans-serif; color:#00000080">
-                    Daha yaxşı həyat üçün
+                    {{ i.desk1 }}
                 </div>
                 <div style=" padding:40px 0 50px; display: flex;">
                     <div>
-                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> Məbləğ</p>
-                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">300-50 000
-                            AZN
+                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> {{ i.a1 }}</p>
+                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">{{ i.a11 }}
                         </p>
                     </div>
                     <div>
-                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> Müddət</p>
-                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">6-59 ay</p>
+                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> {{ i.a2 }}</p>
+                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">{{ i.a22 }}</p>
                     </div>
                     <div>
-                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> İllik faiz dərəcəsi
+                        <p style="margin:0; font: 16px/1.6 'r', Arial, sans-serif; color:#00000080"> {{ i.a3 }}
                         </p>
-                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">min. 11.7%
-                        </p>
+                        <p style="margin:0 30px 0 0; font-size: 21px;font-family: 'm'; line-height: 26px;">{{ i.a33 }}            </p>
                     </div>
                 </div>
                 <div style="display: flex; ">
                     <div class="para" >
-                        <a href="">
+                        <a href="{{url_for('credit_detaill')}}">
                             <p id="sifaris"><b>Sifariş et</b></p>
                         </a>
                     </div>
                     <div class="ox-">
-                        <p> <b style="color: #4d4c4c; padding-left: 20px;">Daha ətraflı </b> <img class="ox" src="blue_arr.svg" alt=""></p>
+                        <a href="{{url_for('credit_detaill')}}"><p> <b style="color: #4d4c4c; padding-left: 20px;">Daha ətraflı </b> <img class="ox" src="static/image/blue_arr.svg" alt=""></p></a>
                     </div>
                 </div>
 
             </div>
 
-            <div><img src="kreditkart1.webp" width="440" alt=""> </div>
+            <div><img src="" width="100%" height="600px" alt="">{{ i.image_img }} </div>
         </div>
+{% endfor %}
 
 
 
@@ -73,8 +72,7 @@
                 etibarlı tərəfdaş Yelo Bank-la həll edib.
                 Bankın təkrar müştərilərinin üstünlük
                 təşkil etməsi təsadüfi deyil. Bir dəfə
-                bunun rahatlığını görənlər növbəti dəfə
-                kredit almaq ya da digər bank xidmətləri
+                bunun rahatlığını görənlər növbəti dəfə kredit almaq ya da digər bank xidmətləri
                 üzrə təkrar müraciət edirlər. Burada
                 bütün bank xidmətlərinin şərtləri olduqca
                 əlçatandır, ona görə Bank kredit goturmek
@@ -83,3 +81,4 @@
         </div>
     </div>
 {% endblock %}
+

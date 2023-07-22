@@ -79,33 +79,9 @@ rangeInputs.forEach(input => {
 })
 
 
-var previousPage = document.referrer; // Get the URL of the previous page
 
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    var menuButton = document.getElementById("menuButton");
 
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
-        menuButton.innerHTML = "<i class='fa fa-times'></i>";
-    } else {
-        menu.style.display = "none";
-        menuButton.innerHTML = "<i class='fa fa-bars'></i>";
-    }
-}
 
-// Handle the back button press
-window.onpopstate = function(event) {
-    toggleMenu();
-    if (event.state !== null && event.state.previousPage) {
-        history.back(); // Go back to the previous page
-    }
-};
-
-// Set the menu display based on the previous page
-if (previousPage === "") {
-    toggleMenu(); // Show menu if there is no previous page
-}
 
 
 var rates = {"bank":{"usd":{"buy":"1.6950","sell":"1.7015","cash_buy":"1.6950","cash_sell":"1.7015"},"eur":{"buy":"1.8600","sell":"1.9550","cash_buy":"1.8600","cash_sell":"1.9550"},"rub":{"buy":"0.0160","sell":"0.0220","cash_buy":"0.0160","cash_sell":"0.0220"},"gbp":{"buy":"2.1000","sell":"2.3400","cash_buy":"2.1000","cash_sell":"2.3400"}},"mb":{"usd":{"buy":"1.7000","sell":"1.7000"},"eur":{"buy":"1.9087","sell":"1.9087"},"rub":{"buy":"0.0188","sell":"0.0188"},"gbp":{"buy":"2.2254","sell":"2.2254"}}},
@@ -177,3 +153,31 @@ var rates = {"bank":{"usd":{"buy":"1.6950","sell":"1.7015","cash_buy":"1.6950","
             table();
         });
         $(document).on('keyup', '.input_value', calculate);
+
+       
+
+
+
+
+
+        $(document).ready(function() {
+          var topp2Wrapper = $(".topp2-wrapper");
+          var topp2 = topp2Wrapper.find(".topp2");
+          var topp2Offset = topp2Wrapper.offset().top;
+        
+          $(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > topp2Offset) {
+              topp2.addClass("fixed");
+            } else {
+              topp2.removeClass("fixed");
+            }
+        
+          
+            if (scrollTop === 0) {
+              topp2Wrapper.addClass("at-top");
+            } else {
+              topp2Wrapper.removeClass("at-top");
+            }
+          });
+        });

@@ -7,20 +7,24 @@ from werkzeug.security import check_password_hash
 
 
 @app.route('/credits/')
-def credits():
-    return render_template('cards.html')
+def creditss():
+    m1 = kredit.query.all()
+    return render_template('creditcard1.html' , m1=m1)
    
 @app.route('/credit_detail/')
-def credit_detail():
-    return render_template('kreditkalkulyatoru.html')
+def credit_detaill():
+    m1 = kredit.query.all()
+    return render_template('kreditkalkulyatoru.html', m1=m1)
 
 @app.route('/xeber/')
-def xeber():
-    return render_template('xeberler.html')
+def xeberr():
+    x1 = Xeber.query.all()
+    return render_template('xeberler.html' , x1=x1)
 
-@app.route('/xeber_detail/')
-def xeber_detail():
-    return render_template('xeber1.html')
+@app.route('/xeber_detail/<int:xeber_id>/')
+def xeber_detaill(xeber_id):
+    x1 = Xeber.query.filter_by(id=xeber_id).first()
+    return render_template('xeber1.html', x1=x1)
 
 
 @app.route('/')
@@ -59,19 +63,56 @@ def login():
 
 @app.route('/menu/')
 def menu():
-    render_template ('menu.html')
+    return render_template ('menu.html')
 
-@app.route('/card/<int:card_id>')
+
+@app.route('/card/<int:card_id>/', methods=['GET', 'POST'])
 def detail_page(card_id):
-    card = Cards.query.filter_by(id=card_id).first()
-    if card:
-        return render_template('cards_info.html' , card=card)
+    card_info = Cards.query.get(card_id)
+    card_detail = CardDetails.query.filter_by(card_id=card_id).first()
+    all_data = request.form
+    form = OrderForm()
+
+    if request.method == "POST":
+        form = OrderForm(data=all_data)
+        if form.validate_on_submit():
+            order_data = CardOrder(card_type=form.card_type.data,currency=form.currency.data,
+                                   name=form.name.data,surname=form.surname.data,mobile_number=form.mobile_number.data,
+                                   fin_code=form.pin.data,odenis_usulu=form.payment_methods.data,
+                                   secret_word=form.secret_word.data,elde_etme_usulu=form.method_ac.data,
+                                   odenis_usulu2=form.payment_type.data, card_id=card_id)
+
+            db.session.add(order_data)
+            db.session.commit()
+            # return redirect(url_for('cards_info', card_id=card_id))
+
+    return render_template('cards_info.html', card_info=card_info, card_detail=card_detail, form=form)
 
 @app.route('/cards/')
 def all_cards():
-    cards = Cards.query.all()
-    return render_template('cards.html', cards=cards)
+    all_cards_list = Cards.query.all()
+    return render_template('cards.html', all_cards_list=all_cards_list)
 
 
-
-
+@app.route('/ordercard/', methods=['GET', 'POST'])
+def recmovie():
+    form = OrderForm()
+    alldata = request.form
+    if request.method == "POST":
+        form=OrderForm(data=alldata)
+        if form.validate_on_submit():
+            order_data = OrderForm(
+        kart_novu = form.card.data,
+        valyuta = form.valyuta.data,
+        ad = form.ad.data,
+        soyad = form.soyad.data,
+        mobil_nomre = form.phone.data,
+        fin = form.fin.data,
+        odenis_usulu = form.odenis_usulu.data,
+        mexfi_soz = form.mexfi_soz.data,
+        elde_etme_usulu = form.elde_etme_usulu.data,
+        odenis_vasitesi = form.odenis_vasitesi.data)
+            
+            order_data.save()
+    
+    return render_template('cards_info.html', form=form)

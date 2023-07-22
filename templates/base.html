@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename ='css/creditcard1.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/footer.css')}}">
    
 </head>
 
@@ -39,14 +40,12 @@
       </div>
     </div>
     <hr style="margin-top: -12px;">
-
-    
-
+    <div class="topp2-wrapper">
     <div class="container">
       <div class="topp2" style="display: flex; align-items: center; justify-content: space-between;" >
         <div class="navbar2">
             <div><a href=""><img src="https://www.yelo.az/site/templates/style/img/logo.svg" alt=""></a></div>
-            <div><a href="">Kreditlər</a></div>
+            <div><a href="{{url_for('creditss')}}">Kreditlər</a></div>
             <div><a href="{{url_for('all_cards')}}">Kartlar</a></div>
             <div><a href="">Əmanətlər</a></div>
             <div><a href="">Cashback</a></div>
@@ -55,16 +54,145 @@
                 <div ><button style="background-color: #FFC628;" ><i class="fa fa-sign-in" style="padding-right: px;"></i><a href="" > Internet Bank
                 </a></button>
             </div>
-                <div style="padding-left: 20px; background-color: white;" ><a class="toggle" href="/templates/menu.html"><button  style="width: 50px;" ><i class="fa fa-bars"></i></button></a>
-                </div>
+            <div style="padding-left: 20px; background-color: white;">
+                <a href="{{url_for('menu')}}"><button id="toggleButton" style="width: 50px;">
+                    <i class="fa fa-bars"></i>
+                </button></a>
+            </div>
             </div>
       </div>
     </div>
-    <br>
+    </div>
+    
 
     {% block content %}
 
     {% endblock %}
+    
+    <br> <br>
+    <div class="container">
+    <footer>
+        <hr style="color:  rgba(0, 0, 0, .5);">
+
+        <div class="box1">
+            <div>
+                <h3><a class="hisse_1" href="https://www.yelo.az/az/individuals/"><b>Fərdi</b></a></h3>
+                <div>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/loans/">Kreditlər</a>
+                    <br><br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/cards/">Kartlar </a> <br>
+                    <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/deposits/">Əmanətlər </a>
+                    <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/money-transfers/">Pul
+                        köçürmələri </a><br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/money-transfers/">Kart
+                        xidmətləri </a> <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/about-bank/documents/tariffs/">Tariflər
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3><a class="hisse_1" href="https://www.yelo.az/az/business/"><b>Biznes</b></a></h3>
+                <div>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/business/loans/">Biznes Kreditlər</a>
+                    <br><br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/business/cards/">Kartlar </a> <br>
+                    <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/business/business-services/"> Biznes
+                        xidmətləri
+                    </a> <br> <br>
+                </div>
+            </div>
+
+            <div>
+                <h3><a class="hisse_1" href="https://www.yelo.az/az/individuals/"><b>Bank haqqında</b></a></h3>
+                <div>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/loans/">Rəhbərlik</a>
+                    <br><br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/cards/">Karyera </a> <br>
+                    <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/deposits/">Hesabatlar </a>
+                    <br> <br>
+                    <a class="hisse_1" id="reng1"
+                        href="https://www.yelo.az/az/individuals/money-transfers/">Komitələr</a><br> <br>
+                    <a class="hisse_1" id="reng1"
+                        href="https://www.yelo.az/az/individuals/money-transfers/">Sənədlər</a> <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/about-bank/documents/tariffs/">Xəbərlər
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3><a class="hisse_1" href="https://www.yelo.az/az/individuals/"><b>Onlayn xidmətlər</b></a></h3>
+                <div>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/loans/">Onlayn kredit
+                        sifarişi</a> <br><br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/cards/">Kart sifarişi </a>
+                    <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/deposits/">Onlayn kredit
+                        ödənişi </a> <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/money-transfers/">Onlayn
+                        ödəmə</a><br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/individuals/money-transfers/">Onlayn
+                        növbə</a> <br> <br>
+                    <a class="hisse_1" id="reng1" href="https://www.yelo.az/az/about-bank/documents/tariffs/">ƏDV geri
+                        al </a>
+                </div>
+            </div>
+        </div> <br> <br> <br> <br>
+        <div class="box2">
+            <div class="icon">
+                <div id="icon"><i class="fa-brands fa-facebook-f" style="color: #a6a8b1;padding:13px;"></i></div>
+                <div id="icon"><i class="fa-brands fa-square-instagram" style="color: #a6a8b1; padding:13px"></i></div>
+                <div id="icon"><i class="fa-brands fa-linkedin-in" style="color: #a6a8b1;padding:13px; "></i></div>
+                <div id="icon"><i class="fa-brands fa-youtube fa-sm"
+                        style="color: #a6a8b1;padding:13px;padding-top: 20px;"></i></div>
+                <div id="icon"><i class="fa-brands fa-twitter fa-sm"
+                        style="color: #a6a8b1;padding:13px; padding-top: 20px;"></i></div>
+            </div>
+
+
+            <div>
+                <div style="color: rgba(0, 0, 0, .5);">Bizi tap </div>
+                <b>Həsən bəy Zərdabi pros. 81k</b>
+            </div>
+            <div>
+                <div style="color: rgba(0, 0, 0, .5);">Əlaqə nömrəsi</div>
+                <b>981</b>
+            </div>
+            <div>
+                <div style="color: rgba(0, 0, 0, .5);">Bizə yazın </div>
+                <b>bank@yelo.az</b>
+            </div>
+        </div>
+        <hr style="color:  rgba(0, 0, 0, .5);"><br>
+        <div id="logo"><img src="logo.svg" alt=""></div> <br>
+
+        <div class="box3">
+            <div style="color:  rgba(0, 0, 0, .5);">© 2023 Yelo Bank | AR MB tərəfindən 25 fevral 1994-cü il tarixində
+                verilmiş 203 saylı lisenziya</div>
+            <div><a href="https://www.e-gov.az/" target="_blank" style="color:  rgba(0, 0, 0, .5);"
+                    class="link">E-portal</a></div>
+            <div><a href="https://www.adif.az/" target="_blank" style="color:  rgba(0, 0, 0, .5);" class="link">ADİF</a>
+            </div>
+            <div><a href="https://infobank.az/" target="_blank" style="color:  rgba(0, 0, 0, .5);"
+                    class="link">infobank.az</a></div>
+            <div><a href="https://qdf.gov.az/iane-imkanlari/" target="_blank" style="color:  rgba(0, 0, 0, .5);"
+                    class="link">Qarabağ Dirçəliş Fondu</a></div>
+            <div><a href="https://gpp.az/WebPortal/Infosite/Sc/989000/Category/8" target="_blank"
+                    style="color:  rgba(0, 0, 0, .5);" class="link">YAŞAT Fondu</a></div>
+
+        </div> <br>
+        <div class="box4">
+            <div style="color:  rgba(0, 0, 0, .5);">Site by <img src="s.svg" alt="" height="12px"> <a id="j"
+                    href="https://www.jis.az/" target="_blank" style="color:  rgba(0, 0, 0, .5);">Jeykhun Imanov
+                    Studio</a></div>
+
+        </div>
+    </footer>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.js"

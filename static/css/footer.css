@@ -79,6 +79,7 @@ h3 {
   display: flex;
   justify-content: start;
   margin: 20px 75px;
+  margin-left: -16px;
 }
 
 .daha {
@@ -143,6 +144,16 @@ h3 {
 
 .kartsol {
   padding: 45px 40px 45px 60px;
+  width: 70%;
+}
+
+.cardkredit{
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.cardkredit img{
+  height: 110%;
 }
 
 .para {
@@ -265,12 +276,13 @@ input[type="range"]::-ms-track {
   -webkit-appearance: none;
   box-shadow: none;
   border: none;
-  background: transparent;
+  background: transparent;
 }
 
 /* xeber.css1 */
-.xeber {display: flex;
-  justify-content:start;
+.xeber {
+  display: flex;
+  justify-content:space-around;
 }
 .basliqxeber {
   font-family: 'h';
@@ -278,6 +290,6 @@ input[type="range"]::-ms-track {
 }
 .metnxeber {
   font-size: 17px;
-  line-height: 30px;
+  line-height: 10px;
   font-family: Arial, sans-serif;
 }

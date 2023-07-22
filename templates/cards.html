@@ -1,108 +1,49 @@
 {% extends 'base.html' %}
-<<<<<<< HEAD
 
 {% block content %}
-    <div class="container"> 
-    <div class="text-center">
-    <h1>Kartlar</h1>
-    <p >Online kart sifarişi xidməti: İndi siz evdən çıxmadan plastik kart sifariş edə bilərsiniz. Yelo Bankın təqdim etdiyi plastik kartlar ilə üstünlüklərdən yararlanmaq üçün tələsin. İstənilən yerdə istifadəsinin rahatlığı və üstünlükləri ilə Yelo Bank hesab kartları hər kəsin ürəyincə olacaq.</p>
-</div>
-<br><br><br>
-    <div class="um"> 
-<div >
-    <div>
-        <b class="com_card" >Yelo Light</b>
-        <p class="com_p">Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.</p>
-    </div>
-    <br>
-    <div class="items">
-    <div class="item">
-        <p>Muddet</p>
-        <b>1 il / 3 il </b>
-    </div>
-    <div class="item">
-        <p>Valyuta</p>
-        <b>AZN / USD / EUR </b>
-    </div>
-    <div class="item">
-        <p>Cashback</p>
-        <b>30%-dek </b>
-    </div>
-</div>
-<div class="d-flex">
-    <div><button class="ic" >Sifaris et</button></div>
-    <b style="padding-top:50px ;padding-left: 50px; color: gray;"><a  href="card_etrafli1.html">Daha etrafli</a></b>
-</div>
-</div>
-<div>
-<div class="bg" >
-    <img src="kart.webp" alt="">
-</div>
-</div>
-=======
->>>>>>> e635dc75b4baa16b3d484726ddc79482196891d7
-
-{% block content %}
-
-{% for card in cards %}
     <div class="container">
         <div class="text-center">
             <h1>Kartlar</h1>
             <p>Online kart sifarişi xidməti: İndi siz evdən çıxmadan plastik kart sifariş edə bilərsiniz. Yelo Bankın təqdim
                 etdiyi plastik kartlar ilə üstünlüklərdən yararlanmaq üçün tələsin. İstənilən yerdə istifadəsinin rahatlığı
                 və üstünlükləri ilə Yelo Bank hesab kartları hər kəsin ürəyincə olacaq.</p>
+
         </div>
-        <br><br><br>
-        <div class="um">
-            <div>
+        <br>
+        {% for card in all_cards_list %}
+            <div class="um" style="margin-bottom: 50px;">
+                <div class="um_ic">
+                    <div>
+                        <b class="com_card">{{card.card_name}}</b>
+                        <p class="com_p">{{card.description}}</p>
+                    </div>
+                    <br>
+                    <div class="items">
+                        <div class="item">
+                            <p>{{card.duration}}</p>
+                            <b>{{card.duration_v}} </b>
+                        </div>
+                        <div class="item">
+                            <p>{{card.currency}}</p>
+                            <b>{{card.currency_v}}</b>
+                        </div>
+                        <div class="item">
+                            <p>{{card.cashback}}</p>
+                            <b>{{card.cashback}}</b>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div><button class="ic">Sifaris et</button></div>
+                        <b style="padding-top:50px ;padding-left: 50px; color: gray;"><a
+                                href="{{url_for('detail_page',card_id=card.id)}}">Daha etrafli</a></b>
+                    </div>
+                </div>
                 <div>
-                    <b class="com_card">{{card.card_name}}</b>
-                    <p class="com_p">{{card.description}}</p>
-                </div>
-                <br>
-                <div class="items">
-                    <div class="item">
-                        <p>{{card.duration}}</p>
-                        <b>{{card.duration_v}} </b>
+                    <div class="bg">
+                        <img src="{{card.card_img}}" alt="">
                     </div>
-                    <div class="item">
-                        <p>{{card.currency}}</p>
-                        <b>{{card.currency_v}}</b>
-                    </div>
-                    <div class="item">
-                        <p>{{card.cashback}}</p>
-                        <b>{{card.cashback}}</b>
-                    </div>
-                </div>
-                <div class="d-flex">
-                    <div><button class="ic">Sifaris et</button></div>
-                    <b style="padding-top:50px ;padding-left: 50px; color: gray;"><a href="/card/card_id">Daha
-                            etrafli</a></b>
                 </div>
             </div>
-            <div>
-                <div class="bg">
-                    <img src="kart.webp" alt="">
-                </div>
-            </div>
-
-        </div>
+        {% endfor %}
     </div>
-
-{% endfor %}
-
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-=======
->>>>>>> e635dc75b4baa16b3d484726ddc79482196891d7
 {% endblock %}

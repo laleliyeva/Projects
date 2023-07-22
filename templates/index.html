@@ -88,7 +88,7 @@
   </div>
 </div>
 <br><br>
-<div class="container" class="story">
+<div class="container " class="story">
   <div>
     <h4>Storiler <span class="counter">3</span></h4>
   </div>
@@ -172,7 +172,7 @@
   </div>
 </div>
 <br><br><br><br>
-<div class="container">
+<div class="container d-block">
   <div>
     <h4>Sizin ucun faydali</h4>
   </div>
@@ -188,20 +188,20 @@
             <li class="d-flex">
               <a href="https://apps.apple.com/az/app/yelo/id1515449668" class="store apple" target="_blank"></a>
               <div>
-                <img src="images/apple.svg" alt="">
+                <a href=""><img src="static/images/apple.svg" alt=""></a>
                 <span>Yukle</span>
                 <span>App Store</span>
               </div>
             </li>
             <li>
-              <img src="google_play.svg" alt="">
+              <a href=""><img src="static/images/google_play.svg" alt=""></a>
               <span>Yukle</span>
               <span>PlayStore</span>
               <a href="https://play.google.com/store/apps/details?id=az.yelo.app&hl=ru" class="store google_play"
                 target="_blank"></a>
             </li>
             <li>
-              <img width="30px" src="images/huawei_play.svg" alt="">
+              <a href=""><img width="30px" src="static/images/huawei_play.svg" alt=""></a>
               <span>Yukle</span>
               <span>AppGallery</span>
               <a href="https://appgallery.huawei.com/#/app/C104500649" class="store huawei_play"></a>
@@ -214,10 +214,11 @@
 
       </div>
     </div>
+    
     <div class="d-block">
       <div class="calculator" style="padding-left: 100px;">
         <div class="c_line">
-          <input type="text" placeholder="Satıram" value="" class="c_int input_value only_number">
+          <input type="text" placeholder="Satıram" value="" class="c_int input_value only_number" wfd-id="'id27">
           <select name="from" class="s_curr">
             <option value="azn" selected="">AZN</option>
             <option value="usd">USD</option>
@@ -232,6 +233,8 @@
             <option value="eur">EUR</option>
           </select>
         </div>
+       <script>document.querySelector("body > div.app > div.content > div.main_wrap > div:nth-child(2) > div.block_content.cols > div.col.col_1 > div > div.calculator > div.c_result > div:nth-child(2) > b:nth-child(2)")
+      document.querySelector("body > div:nth-child(17) > div.d-flex > div.d-block > div > div:nth-child(2) > div")</script> 
         <div class="c_result">
           <div class="cr_item">
             <p>Valyuta</p>
@@ -240,8 +243,7 @@
           </div>
           <div class="cr_item">
             <p>Alış</p>
-            <b class="cr_item_buy table_buy_rate" data-curr="usd" data-cash="1.6950" data-nocash="1.6950"
-              style="display: block">1.6950</b>
+            <b class="cr_item_buy table_buy_rate" data-curr="usd" data-cash="1.6930" data-nocash="1.6930" style="display: block">1.6930</b>
             <b class="cr_item_buy table_buy_rate" data-curr="eur" data-cash="1.8600" data-nocash="1.8600"
               style="display: block">1.8600</b>
           </div>
@@ -255,13 +257,47 @@
         </div>
       </div>
     </div>
+  </div>
+  <div>
     <div>
       <p class="info_p">Region filiallarında məzənnələr fərqli ola bilər</p>
       <a href="https://www.yelo.az/az/exchange-rates/" class="all_exchanges">Bütün məzənnələr</a>
 
     </div>
-
   </div>
+
+  
+</div>
+
+<div id="s" class="container">
+  <div>
+      <b style="font-size:1.5rem; ">Son xəbərlər</b>
+  </div>
+
+</div>
+<div class="container">
+<div class="cardskredit1">
+   {% for xeber in x1 %}
+      <div class="cardfooter">
+        <b>{{xeber.title}}</b>
+        <div style="display: flex;justify-content:space-between" class="daha">
+            <a href="https://www.yelo.az/az/news/yelo-dan-novbeti-yenilik/" class="bttn" style="color:#0091FE;"><b>
+                    Daha ətraflı</b> <img src="blue_arr.svg" alt=""></a>
+            <time>{{xeber.tarix}}</time>
+        </div>
+      </div>
+    {% endfor %}
+
+</div>
+
+<br>
+<div class="xeberler" style="text-align: center;">
+  <a href="{{url_for('xeberr')}}" class="butunxeber bttn"
+      style="color:#0091FE; text-decoration:none;">
+      <b>Bütün xəbərlər</b> 
+      <img src="blue_arr.svg" alt="">
+  </a>
+</div>
 </div>
 
 {% endblock %}

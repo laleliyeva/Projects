@@ -1,47 +1,42 @@
-{ % extends 'base.html' %}
+{% extends 'base.html' %}
 
-{ % block content %}
+{% block content %}
 
 <div style="background-color: #F3F1F7;">
     <div class="container d-flex ">
-        {% for card in cards %}
-        <div><img style="width: 140%;" src="{{card.phone_img}}" alt=""></div>
-        <div class="advantage_grid">
-            <h2 style="padding-left: 205px; padding-bottom: 20px;">Sənin də hər yerdə qazandıran sarı kartın olsun!</h2>
-            <ul class="row" style="width: 100%; padding-left: 200px; padding-bottom: 20px;">
-                <li class="d-flex ">
-                    <div class="icon"><img src="{{card.icon}}" alt=""></div>
-                    <h5>{{card.title}}</h5>
-                </li>
-                <!-- <li class="d-flex ">
-                    <div class="icon"><img src="e2.svg" alt=""></div>
-                    <h5>Seçilmiş kateqoriyalarda 4%-dək cashback</h5>
-                </li>
-                <li class="d-flex ">
-                    <div class="icon"><img src="e3.svg" alt=""></div>
-                    <h5>Ünvana pulsuz çatdırılma</h5>
-                </li>
-                <li class="d-flex ">
-                    <div class="icon"><img src="e4.svg" alt=""></div>
-                    <h5>Kart hesabının qalığına gəlir illik 4% (AZN)*</h5>
-                </li>
-                <li class="d-flex ">
-                    <div class="icon"><img src="e5.svg" alt=""></div>
-                    <h5>1 illik - 10 AZN / 5 illik - 15 AZN və ya ilkin mədaxil ilə pulsuz</h5>
-                </li>
-                <li class="d-flex ">
-                    <div class="icon"><img src="e6.svg" alt=""></div>
-                    <h5>Partnyorlarda 30%-dək cashback</h5>
-                </li> -->
-            </ul>
-            <div class="two_button" style="padding-top: 60px;padding-left: 200px;">
-                <a href="" class="yellow to_form">Sifaris et</a>
-                <a href="" class="white call_pdf_modal">Tariflere kecid et</a>
+            <div><img style="width: 140%;" src="{{card_detail.phone_img}}" alt=""></div>
+            <div class="advantage_grid">
+                <h2 style="padding-left: 205px; padding-bottom: 20px;">Sənin də hər yerdə qazandıran sarı kartın olsun!</h2>
+                <ul class="row" style="width: 100%; padding-left: 200px; padding-bottom: 20px;">
+                    <li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon}}" alt=""></div>
+                        <h5>{{card_detail.title}}</h5>
+                    </li>
+                    <li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon2}}" alt=""></div>
+                        <h5>{{card_detail.title2}}</h5>
+                    </li><li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon3}}" alt=""></div>
+                        <h5>{{card_detail.title3}}</h5>
+                    </li><li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon4}}" alt=""></div>
+                        <h5>{{card_detail.title4}}</h5>
+                    </li><li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon5}}" alt=""></div>
+                        <h5>{{card_detail.title5}}</h5>
+                    </li><li class="d-flex ">
+                        <div class="icon"><img src="{{card_detail.icon6}}" alt=""></div>
+                        <h5>{{card_detail.title6}}</h5>
+                    </li>
+                </ul>
+                <div class="two_button" style="padding-top: 60px;padding-left: 200px;">
+                    <a href="" class="yellow to_form">Sifaris et</a>
+                    <a href="" class="white call_pdf_modal">Tariflere kecid et</a>
+                </div>
             </div>
-
-        </div>
-        {% endblock %}
     </div>
+    
+
 </div>
 <div class="container">
 
@@ -52,7 +47,7 @@
     <div class="cashback_four">
         <article>
             <div class="icon">
-                <img src="images/c1.svg" alt="">
+                <img src="static/images/c1.svg" alt="">
                 <span>2%</span>
             </div>
             <h3>Market</h3>
@@ -60,7 +55,7 @@
         </article>
         <article>
             <div class="icon">
-                <img src="images/c2.svg" alt="">
+                <img src="static/images/c2.svg" alt="">
                 <span>4%</span>
             </div>
             <h3>Geyim</h3>
@@ -68,7 +63,7 @@
         </article>
         <article>
             <div class="icon">
-                <img src="images/c3.svg" alt="">
+                <img src="static/images/c3.svg" alt="">
                 <span>4%</span>
             </div>
             <h3>YDM</h3>
@@ -76,7 +71,7 @@
         </article>
         <article>
             <div class="icon">
-                <img src="images/c4.svg" alt="">
+                <img src="static/images/c4.svg" alt="">
                 <span>4%</span>
             </div>
             <h3>Kafe & Restoranlar</h3>
@@ -105,151 +100,76 @@
     <div class="card_order_img">
         <h2>Yelo Light</h2>
         <div class="card_img">
-            <span><img src="images/kart.webp" alt=""></span>
+            <span><img src="https://www.yelo.az/site/assets/files/8220/yelo.png" alt=""></span>
         </div>
     </div>
 
     <div class="cardorder">
         <section>
-            <div class="order_form no_padding">
-                <div class="form_self no_border">
-                    <div class="fs_inner card_form">
-                        <div class="two_input">
-                            <div class="one_input">
-                                <label>
-                                    <select name="card" class>
-                                        <option value disabled="disabled" selected="selected"></option>
-                                        <option value="165">VISA</option>
-                                        <option value="166">Mastercard</option>
-                                    </select>
-                                    <span>Kart novu</span>
-                                </label>
+            <form method="POST">
+                {{ form.csrf_token }}
+                <div class="order_form no_padding">
+                    <div class="form_self no_border">
+                        <div class="fs_inner card_form">
+                            <div class="two_input">
+                                <div class="one_input">
+                                    {{ form.card_type }}
+                                </div>
+                                <div class="one_input">
+                                    {{ form.currency }}
+                                </div>
                             </div>
-                            <div class="one_input">
-                                <label>
-                                    <select class>
-                                        <option value disabled="disabled" selected="selected"></option>
-                                        <option value="AZN">AZN</option>
-                                        <option value="USD">USD</option>
-                                        <option value="EUR">EUR</option>
-                                    </select>
-                                    <span>Valyuta</span>
-                                </label>
+                            <div class="two_input">
+                                <div class="one_input">
+                                    {{ form.name }}
+                                </div>
+                                <div class="one_input">
+                                    {{ form.surname }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="two_input">
-                            <div class="one_input">
-                                <label>
-                                    <input type="text" placeholder class="mask_letter_az">
-                                    <span>Ad</span>
-                                </label>
+                            <div class="two_input">
+                                <div class="one_input">
+                                    {{ form.mobile_number }}
+                                </div>
+                                <div class="one_input">
+                                    {{ form.pin }}
+                                </div>
                             </div>
-                            <div class="one_input">
-                                <label>
-                                    <input type="text" placeholder class="mask_letter_az">
-                                    <span>Soyad</span>
-                                </label>
+                            <div class="two_input">
+                                <div class="one_input">
+                                    {{ form.payment_methods }}
+                                </div>
+                                <div class="one_input">
+                                    {{ form.secret_word }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="two_input">
+                            <h3 class="devider_h3">
+                                <span>Tehvil ve odenis</span>
+                            </h3>
                             <div class="one_input">
-                                <label>
-                                    <input type="text" name="phone" placeholder="+994 00 000 00 00"
-                                        class="valid_always mask_phone_long">
-                                    <span>Mobil nomre</span>
-                                </label>
+                                
+                                {{ form.method_ac }}
                             </div>
+                            <h4>Odenisi nece etmek isteyirsiniz?</h4>
                             <div class="one_input">
-                                <label>
-                                    <input type="text" placeholder maxlength="7" class="fin_input not_symbols">
-                                    <span>FIN</span>
-                                </label>
+                                {{ form.payment_type }}
                             </div>
-                        </div>
-                        <div class="two_input">
-                            <div class="one_input">
-                                <label>
-                                    <select class>
-                                        <option value disabled="disabled" selected="selected"></option>
-                                        <option value="prepayment">Kartin qiymetini odemekle</option>
-                                        <option value="postpayment">Ilkin medaxil ile</option>
-                                    </select>
-                                    <span>Odenis usulu</span>
-                                </label>
+                            <br>
+                            <span style="color: red;"></span>
+                            <div class="form_davam">
+                                <button type="submit" class="credit_buy">Davam et</button>
                             </div>
-                            <div class="one_input">
-                                <label>
-                                    <input type="text" placeholder maxlength="7" class="fin_input not_symbols">
-                                    <span>Mexfi soz</span>
-                                </label>
-                            </div>
-                        </div>
-                        <h3 class="devider_h3">
-                            <span>Tehvil ve odenis</span>
-                        </h3>
-                        <div class="one_input">
-                            <label>
-                                <select class>
-                                    <option value disabled="disabled" selected="selected"></option>
-                                    <option value="delivery">Catdirilma ile - Pulsuz</option>
-                                    <option value="branch">Bankin filialindan</option>
-                                </select>
-                                <span>Elde etme usulu</span>
-                            </label>
-                        </div>
-                        <h4>Odenisi nece etmek isteyirsiniz?</h4>
-                        <div class="one_input">
-                            <label>
-                                <select class>
-                                    <option value disabled="disabled" selected="selected"></option>
-                                    <option value="terminal">Terminaldan</option>
-                                </select>
-                                <span>Odenis vasitesi</span>
-                            </label>
-                        </div>
-                        <br>
-                        <div class="one_input">
-                            <label>
-                                <input type="checkbox" checked="checked">
-                                <em></em>
-                                <span>“Davam et” basmaqla Asan finansdan fərdi məlumatların alınmasına razılıq
-                                    verirəm</span>
-                            </label>
-                        </div>
-                        <span style="color: red;"></span>
-                        <div class="form_davam">
-                            <button type="submit" class="credit_buy">Davam et</button>
                         </div>
                     </div>
                 </div>
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </form>
 
 
     </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+{% endblock %}
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -257,6 +177,4 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="main.js"></script>
 
-</body>
-
-</html>
+</body> -->

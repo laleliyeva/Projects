@@ -1,63 +1,21 @@
-<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
-=======
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="footer.css">
-</head>
-
-<body>
->>>>>>> e635dc75b4baa16b3d484726ddc79482196891d7
     <br>
     <h1 style="text-align: center; font-family: Arial, sans-serif;"> Son Xəbərlər</h1>
     <br>
 
-    <div class="cardskredit1">
-        <div class="cardfooter">
-            <b>Yelo Bank hesablarına ExpressPay ilə rahat mədaxil et</b>
-            <p></p>
-            <div style="display: flex;justify-content:space-between" class="daha">
-                <a href="https://www.yelo.az/az/news/yelo-dan-novbeti-yenilik/" class="bttn" style="color:#0091FE;"><b>
-                        Daha ətraflı</b> <img src="blue_arr.svg" alt=""></a>
-                <time>6 iyul 2023</time>
+    <div class="container m-auto cardskredit1">
+        {% for xeber in x1 %}
+            <div class="cardfooter">
+                <b>{{xeber.title}}</b>
+                <div style="display: flex;justify-content:space-between" class="daha">
+                    <a href="/xeber_detail/{{xeber.id}}" class="bttn" style="color:#0091FE;"><b>
+                            Daha ətraflı</b> <img src="blue_arr.svg" alt=""></a>
+                    <time>{{xeber.time}}</time>
+                </div>
             </div>
-        </div>
-        <div class="cardfooter"></div>
-        <div class="cardfooter"></div>
+        {% endfor %}
     </div>
-    <div class="cardskredit1">
-        <div class="cardfooter">
-            <b>Yelo Bank hesablarına ExpressPay ilə rahat mədaxil et</b>
-            <p></p>
-            <div style="display: flex;justify-content:space-between" class="daha">
-                <a href="https://www.yelo.az/az/news/yelo-dan-novbeti-yenilik/" class="bttn" style="color:#0091FE;"><b>
-                        Daha ətraflı</b> <img src="blue_arr.svg" alt=""></a>
-                <time>6 iyul 2023</time>
-            </div>
-        </div>
-        <div class="cardfooter"></div>
-        <div class="cardfooter"></div>
-    </div>
-    <br>
-    <div class="xeberler" style="text-align: center;">
-        <a href="https://www.yelo.az/az/news/yelo-dan-novbeti-yenilik/" class="butunxeber bttn"
-            style="color:#0091FE; text-decoration:none;">
-            <b>Daha çox</b>
-            <img src="blue_arr.svg" alt="">
-        </a>
-    </div>
-    <br> <br>
-<<<<<<< HEAD
-{% endblock %}
-=======
-</body>
-
-</html>
->>>>>>> e635dc75b4baa16b3d484726ddc79482196891d7
+    {% endblock %}
