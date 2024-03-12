@@ -26,7 +26,6 @@ def xeber_detaill(xeber_id):
     x1 = Xeber.query.filter_by(id=xeber_id).first()
     return render_template('xeber1.html', x1=x1)
 
-
 @app.route('/')
 def main_page():
     all_stories = Stories.query.all()
@@ -84,7 +83,6 @@ def detail_page(card_id):
 
             db.session.add(order_data)
             db.session.commit()
-            # return redirect(url_for('cards_info', card_id=card_id))
 
     return render_template('cards_info.html', card_info=card_info, card_detail=card_detail, form=form)
 
